@@ -1,0 +1,22 @@
+{
+    "name": "ltw/module-newspaper",
+    "description": "NewsPaper module,blog for Magento2",
+    "type": "magento2-module",
+    "license": "proprietary",
+    "authors": [
+        {
+            "email": "dims.ltw@gmail.com",
+            "name": "Dmitriy Litvinov"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Ltw\\Newspaper\\": ""
+        }
+    }
+}

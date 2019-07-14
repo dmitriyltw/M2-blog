@@ -1,0 +1,35 @@
+<?xml version="1.0" ?>
+<widgets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:helloworld:Magento_Widget:etc/widget.xsd">
+    <widget class="Ltw\Newspaper\Block\Widget\Posts" id="ltw_newspaper_posts">
+        <label>Ltw Newspaper</label>
+        <description>Posts</description>
+        <parameters>
+            <parameter name="posts" sort_order="10" visible="true" xsi:type="text">
+                <label>Custom Posts Label</label>
+            </parameter>
+            <parameter name="display_type" xsi:type="select" required="true" visible="true">
+                <label translate="true">Number of Posts to display</label>
+                <description translate="true">Number of Posts to display</description>
+                <options>
+                    <option name="default" value="1" selected="true">
+                        <label translate="true">1</label>
+                    </option>
+                    <option name="second_choice" value="3">
+                        <label translate="true">3</label>
+                    </option>
+                    <option name="third_choice" value="5">
+                        <label translate="true">5</label>
+                    </option>
+                </options>
+            </parameter>
+            <parameter name="image_width" xsi:type="text" required="true" visible="true">
+                <label translate="true">Image width (px)</label>
+                <value>0</value>
+            </parameter>
+            <parameter name="image_height" xsi:type="text" required="true" visible="true">
+                <label translate="true">Image height (px)</label>
+                <value>0</value>
+            </parameter>
+        </parameters>
+    </widget>
+</widgets>

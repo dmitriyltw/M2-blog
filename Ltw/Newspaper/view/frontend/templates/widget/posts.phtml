@@ -1,0 +1,36 @@
+<?php if ($block->getData('posts')): ?>
+    <h2 class='posts'><?php echo $block->getData('posts'); ?></h2>
+    <?php endif; ?>
+
+<?php
+/** @var \Ltw\Newspaper\Block\Widget\Posts $block */
+$collection = $block->getCollection();
+?>
+
+<?php foreach ($collection as $item): ?>
+<div style="">
+    <h2 style="">
+        <a href="<?= $block->getCustomUrl($item->getPostId());?>"><?= $item->getHeadline(); ?></a>
+    </h2>
+        <a href="<?= $block->getCustomUrl($item->getPostId());?>">
+            <img src="<?= $block->getCustomMediaUrl() . $block->getImageUploader()->getBaseTmpPath() . $item->getFeaturedImage();?>"
+                 width="<?= $block->getImageWidth() ?>;"
+                 height="<?= $block->getImageHeight() ?>">
+        </a>
+
+<div class="description-blog">
+    <span>
+        <?= $item->getCreatedAt() ?>
+    </span>
+    <br>
+    <span>
+    <?= $item->getShortDescription();?>
+    </span>
+</div>
+<br>
+
+<a href="<?= $block->getCustomUrl($item->getPostId()) ?>">Read more...</a>
+</div>
+<?php endforeach; ?>
+
+

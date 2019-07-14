@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd">
+    <event name="ltw_newspaper_save_post_before">
+        <observer name="loggerBeforeSavePost" instance="Ltw\Newspaper\Observer\LoggerBeforeSave" />
+    </event>
+    <event name="ltw_newspaper_save_post_after">
+        <observer name="loggerAfterSavePost" instance="Ltw\Newspaper\Observer\LoggerAfterSave" />
+    </event>
+</config>

@@ -1,0 +1,16 @@
+<h1>Welcome to Ltw Newspaper</h1>
+<?php
+/** @var \Ltw\Newspaper\Block\Post\Index $block */
+$collection = $block->getCollection();
+?>
+<div>
+    <?php foreach ($collection as $post): ?>
+        <header>
+            <h2>
+                <?= $post->getHeadline() ?>
+            </h2>
+            <img src="<?= $block->getCustomUrl() . $block->getImageUploader()->getBaseTmpPath() . $post->getFeaturedImage();?>" alt="<?= $post->getCreatedAt() ?>" />
+        </header>
+        <?= $post->getPostContent() ?>
+    <?php endforeach ?>
+</div>
